@@ -28,8 +28,6 @@ Game.prototype.turnRight=function() {
 
 Game.prototype.grow=function() {
   let growthFactor=this.food.getGrowthFactor();
-  this.score += 10;
-  console.log(growthFactor);
   return this.snake.grow(growthFactor);
 }
 
@@ -54,7 +52,6 @@ Game.prototype.hasSnakeEatenFood=function() {
 }
 
 Game.prototype.createFood=function() {
-  console.log(this.bottomRight);
   let position=generateRandomPosition(this.bottomRight.x,this.bottomRight.y);
   let random=generateRandomNumberBetween(0,10);
   let growthFactor=1;
